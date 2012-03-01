@@ -82,6 +82,11 @@ in your package.json. E.g.
     }
 ```
 
+You'll need your AWS credentials in the following environment variables:
+
+    AWS_ACCESS_KEY
+    AWS_SECRET_ACCESS_KEY
+
 Then, to do a release, run:
 
     npm run-script build-release
