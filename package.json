@@ -1,0 +1,25 @@
+{
+    "name": "release-utils",
+    "version": "0.0.1",
+    "description": "Tools for incrementing versions and tagging projects in Git. Also contains a script for packaging npm modules and uploading them to S3 which is useful for deploying closed-source npm modules.",
+    "author": "Charles Care <c.p.care@gmail.com>",
+    "contributors": [
+        {
+            "name": "Charles Care",
+            "email": "c.p.care@gmail.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ccare/s3-release.git"
+    },
+    "dependencies": {
+        "knox": ">= 0.0.9"
+    },
+    "engines": {
+        "node": ">= 0.4.0"
+    },
+    "scripts": {
+        "tag-release": "node npm-release.js"
+    }
+}
