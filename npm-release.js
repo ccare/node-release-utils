@@ -1,19 +1,8 @@
 var fs = require('fs');
 var child_process = require('child_process'); 
 
-var S3_KEY = process.env.TALIS_AWS_ACCESS_KEY_ID;
-var S3_SECRET = process.env.TALIS_AWS_SECRET_ACCESS_KEY;
-var S3_BUCKET = process.argv[2];
-var PUBLISH_ROOT = "nodejs/";
 var PACKAGE_JSON_FILE = 'package.json';
 var JSON_INDENT = 4;
-
-// S3 client
-var knox = require('knox').createClient({
-    key: S3_KEY,
-    secret: S3_SECRET,
-    bucket: S3_BUCKET
-});
 
 function buildTagCmd(tagName) {
     return 'git tag ' + tagName
