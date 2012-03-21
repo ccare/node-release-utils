@@ -85,7 +85,7 @@ function pushTag(tagName) {
 }
 
 function upload(srcPath, targetPath) {
-    knox.putFile(srcPath, targetPath, {}, function(err, result) {
+    knox.putFile(srcPath, targetPath, {'x-amz-acl': ''}, function(err, result) {
         if (err) { console.log(err) }
         else if (200 == result.statusCode) { console.log('Uploaded %s to Amazon S3', srcPath); }
         else { console.log('Failed to upload file to Amazon S3'); }
